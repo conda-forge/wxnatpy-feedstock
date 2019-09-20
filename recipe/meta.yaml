@@ -1,6 +1,6 @@
 {% set name = "wxnatpy" %}
-{% set version = "0.3.1" %}
-{% set sha256 = "130b4b39299e213c4cf6829b64c03d2e0e3ba6b234a8d5f2044d7b4cb572c5f4" %}
+{% set version = "0.3.2" %}
+{% set sha256 = "252c07d63caaca94beb3a73016a65eb6807d92387b6f396e061bf0408801ac82" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
