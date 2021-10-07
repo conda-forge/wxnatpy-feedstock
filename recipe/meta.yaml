@@ -1,6 +1,6 @@
 {% set name = "wxnatpy" %}
-{% set version = "0.3.2" %}
-{% set sha256 = "252c07d63caaca94beb3a73016a65eb6807d92387b6f396e061bf0408801ac82" %}
+{% set version = "0.4.0" %}
+{% set sha256 = "d7d6b27c07b3351e85a7ac55abc119817620e2709d5965c7ef335403148bc586" %}
 
 package:
   name: {{ name|lower }}
@@ -14,10 +14,10 @@ source:
 build:
   noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
@@ -37,7 +37,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: 'A wxPython widget for browsing a XNAT repository'
+  summary: A wxPython widget for browsing a XNAT repository
   dev_url: https://github.com/pauldmccarthy/wxnatpy
 
 extra:
